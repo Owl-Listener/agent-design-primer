@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600" role="img" aria-labelledby="title desc">
+  <title id="title">The plan-progress-handoff chain</title>
+  <desc id="desc">Three Layer 3 patterns shown as an evolving form. Plan is shown as a wheel of empty segments — the structure of the work. Progress is the same wheel with several segments filled in — the live state. Handoff is the wheel breaking into two overlapping wheels — context passed to a new collaborator. Arrows between them are labelled with what travels: 'the structure' and 'the live state'. A light return arrow shows that new collaborators often begin a fresh plan.</desc>
+  <style>
+    .bg { fill: #f4eede; }
+    .h { font-family: "Inter", "IBM Plex Sans", ui-sans-serif, system-ui, sans-serif; font-weight: 700; fill: #1a1a1a; }
+    .b { font-family: "Inter", "IBM Plex Sans", ui-sans-serif, system-ui, sans-serif; font-weight: 500; fill: #1a1a1a; }
+    .it { font-family: "Inter", "IBM Plex Sans", ui-sans-serif, system-ui, sans-serif; font-style: italic; fill: #5a5a5a; }
+    .cap { font-family: "Inter", "IBM Plex Sans", ui-sans-serif, system-ui, sans-serif; font-weight: 600; fill: #1a1a1a; letter-spacing: 1.5px; text-transform: uppercase; }
+    .arrow { stroke: #1a1a1a; stroke-width: 2.5; fill: none; }
+    .arrow-light { stroke: #1a1a1a; stroke-width: 1.5; fill: none; stroke-dasharray: 6 6; }
+  </style>
+
+  <rect class="bg" width="1200" height="600" />
+
+  <!-- Caption -->
+  <text class="cap" x="60" y="55" font-size="14">three patterns, one chain</text>
+
+  <!-- Stage 1: Plan (sage wheel, all segments empty) -->
+  <g transform="translate(200, 280)">
+    <!-- Wheel: 6 segments -->
+    <g>
+      <path d="M 0 -100 A 100 100 0 0 1 86.6 -50 L 0 0 Z" fill="#f4eede" stroke="#1a1a1a" stroke-width="2.5" />
+      <path d="M 86.6 -50 A 100 100 0 0 1 86.6 50 L 0 0 Z" fill="#f4eede" stroke="#1a1a1a" stroke-width="2.5" />
+      <path d="M 86.6 50 A 100 100 0 0 1 0 100 L 0 0 Z" fill="#f4eede" stroke="#1a1a1a" stroke-width="2.5" />
+      <path d="M 0 100 A 100 100 0 0 1 -86.6 50 L 0 0 Z" fill="#f4eede" stroke="#1a1a1a" stroke-width="2.5" />
+      <path d="M -86.6 50 A 100 100 0 0 1 -86.6 -50 L 0 0 Z" fill="#f4eede" stroke="#1a1a1a" stroke-width="2.5" />
+      <path d="M -86.6 -50 A 100 100 0 0 1 0 -100 L 0 0 Z" fill="#f4eede" stroke="#1a1a1a" stroke-width="2.5" />
+    </g>
+    <circle cx="0" cy="0" r="100" fill="none" stroke="#a0b196" stroke-width="12" />
+  </g>
+  <text class="h" x="200" y="165" text-anchor="middle" font-size="28">Plan</text>
+  <text class="it" x="200" y="430" text-anchor="middle" font-size="14">visible, editable, the contract</text>
+
+  <!-- Stage 2: Progress (yellow wheel, half segments filled) -->
+  <g transform="translate(600, 280)">
+    <g>
+      <path d="M 0 -100 A 100 100 0 0 1 86.6 -50 L 0 0 Z" fill="#e6b637" stroke="#1a1a1a" stroke-width="2.5" />
+      <path d="M 86.6 -50 A 100 100 0 0 1 86.6 50 L 0 0 Z" fill="#e6b637" stroke="#1a1a1a" stroke-width="2.5" />
+      <path d="M 86.6 50 A 100 100 0 0 1 0 100 L 0 0 Z" fill="#e6b637" stroke="#1a1a1a" stroke-width="2.5" opacity="0.5" />
+      <path d="M 0 100 A 100 100 0 0 1 -86.6 50 L 0 0 Z" fill="#f4eede" stroke="#1a1a1a" stroke-width="2.5" />
+      <path d="M -86.6 50 A 100 100 0 0 1 -86.6 -50 L 0 0 Z" fill="#f4eede" stroke="#1a1a1a" stroke-width="2.5" />
+      <path d="M -86.6 -50 A 100 100 0 0 1 0 -100 L 0 0 Z" fill="#f4eede" stroke="#1a1a1a" stroke-width="2.5" />
+    </g>
+    <circle cx="0" cy="0" r="100" fill="none" stroke="#e6b637" stroke-width="12" />
+  </g>
+  <text class="h" x="600" y="165" text-anchor="middle" font-size="28">Progress</text>
+  <text class="it" x="600" y="430" text-anchor="middle" font-size="14">live state against the plan</text>
+
+  <!-- Stage 3: Handoff (magenta + teal, two overlapping wheels) -->
+  <g transform="translate(975, 280)">
+    <!-- First wheel: in transition out, lighter magenta -->
+    <circle cx="-40" cy="0" r="80" fill="#d44569" stroke="#1a1a1a" stroke-width="2.5" opacity="0.7" />
+    <!-- Second wheel: new collaborator picks up, teal -->
+    <circle cx="40" cy="0" r="80" fill="#2e9ba8" stroke="#1a1a1a" stroke-width="2.5" />
+    <!-- Overlap area emphasized -->
+    <circle cx="0" cy="0" r="30" fill="#1a1a1a" />
+  </g>
+  <text class="h" x="975" y="165" text-anchor="middle" font-size="28">Handoff</text>
+  <text class="it" x="975" y="430" text-anchor="middle" font-size="14">context passes, state survives</text>
+
+  <!-- Arrows between stages -->
+  <line class="arrow" x1="340" y1="280" x2="460" y2="280" />
+  <path d="M 460 280 L 450 273 M 460 280 L 450 287" class="arrow" />
+  <text class="b" x="400" y="265" text-anchor="middle" font-size="14">the structure</text>
+
+  <line class="arrow" x1="740" y1="280" x2="860" y2="280" />
+  <path d="M 860 280 L 850 273 M 860 280 L 850 287" class="arrow" />
+  <text class="b" x="800" y="265" text-anchor="middle" font-size="14">the live state</text>
+
+  <!-- Return arrow from Handoff back to Plan (light) -->
+  <path d="M 975 175 Q 975 90, 600 90 Q 200 90, 200 175" class="arrow-light" />
+  <path d="M 200 175 L 193 162 M 200 175 L 207 162" class="arrow-light" />
+  <text class="it" x="600" y="80" text-anchor="middle" font-size="13">new collaborator often starts with a fresh plan</text>
+
+  <!-- Caption at bottom -->
+  <text class="b" x="600" y="525" text-anchor="middle" font-size="15">the same wheel evolves through three states. each pattern carries the next.</text>
+</svg>

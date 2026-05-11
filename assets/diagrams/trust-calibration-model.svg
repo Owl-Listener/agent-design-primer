@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600" role="img" aria-labelledby="title desc">
+  <title id="title">The trust calibration model</title>
+  <desc id="desc">A horizontal composition with three regions. Under-trust on the left in muted sage with sparse stripes. Calibrated trust in the centre as a strong magenta band with dense stripes — the design target. Over-trust on the right in muted teal with sparse stripes. Markers below show where novice users and expert users tend to start before the design intervenes.</desc>
+  <style>
+    .bg { fill: #f4eede; }
+    .h { font-family: "Inter", "IBM Plex Sans", ui-sans-serif, system-ui, sans-serif; font-weight: 700; fill: #1a1a1a; }
+    .b { font-family: "Inter", "IBM Plex Sans", ui-sans-serif, system-ui, sans-serif; font-weight: 500; fill: #1a1a1a; }
+    .b-cream { font-family: "Inter", "IBM Plex Sans", ui-sans-serif, system-ui, sans-serif; font-weight: 500; fill: #f4eede; }
+    .it { font-family: "Inter", "IBM Plex Sans", ui-sans-serif, system-ui, sans-serif; font-style: italic; fill: #5a5a5a; }
+    .cap { font-family: "Inter", "IBM Plex Sans", ui-sans-serif, system-ui, sans-serif; font-weight: 600; fill: #1a1a1a; letter-spacing: 1.5px; text-transform: uppercase; }
+  </style>
+
+  <rect class="bg" width="1200" height="600" />
+
+  <defs>
+    <pattern id="sageStripes" patternUnits="userSpaceOnUse" width="24" height="24">
+      <rect width="24" height="24" fill="#a0b196" />
+      <rect width="3" height="24" fill="#f4eede" />
+    </pattern>
+    <pattern id="magentaStripes" patternUnits="userSpaceOnUse" width="10" height="10">
+      <rect width="10" height="10" fill="#d44569" />
+      <rect width="3" height="10" fill="#f4eede" />
+    </pattern>
+    <pattern id="tealStripes" patternUnits="userSpaceOnUse" width="24" height="24">
+      <rect width="24" height="24" fill="#2e9ba8" />
+      <rect width="3" height="24" fill="#f4eede" />
+    </pattern>
+  </defs>
+
+  <!-- Caption -->
+  <text class="cap" x="60" y="60" font-size="14">trust calibration is the alignment between user trust and system trustworthiness</text>
+
+  <!-- Three regions -->
+  <rect x="60" y="120" width="320" height="240" fill="url(#sageStripes)" stroke="#1a1a1a" stroke-width="2" />
+  <rect x="380" y="100" width="440" height="280" fill="url(#magentaStripes)" stroke="#1a1a1a" stroke-width="2.5" />
+  <rect x="820" y="120" width="320" height="240" fill="url(#tealStripes)" stroke="#1a1a1a" stroke-width="2" />
+
+  <!-- Region labels in cream blocks -->
+  <rect x="80" y="150" width="280" height="80" fill="#f4eede" />
+  <text class="h" x="220" y="185" text-anchor="middle" font-size="26">Under-trust</text>
+  <text class="b" x="220" y="212" text-anchor="middle" font-size="14">user ignores correct output</text>
+
+  <rect x="400" y="130" width="400" height="80" fill="#f4eede" />
+  <text class="h" x="600" y="165" text-anchor="middle" font-size="28">Calibrated trust</text>
+  <text class="b" x="600" y="192" text-anchor="middle" font-size="14">trust matches trustworthiness, task by task</text>
+
+  <rect x="840" y="150" width="280" height="80" fill="#f4eede" />
+  <text class="h" x="980" y="185" text-anchor="middle" font-size="26">Over-trust</text>
+  <text class="b" x="980" y="212" text-anchor="middle" font-size="14">user accepts wrong output</text>
+
+  <!-- Failure mode tags inside the striped zones -->
+  <rect x="100" y="290" width="240" height="40" fill="#f4eede" />
+  <text class="it" x="220" y="316" text-anchor="middle" font-size="14">friction, abandonment</text>
+
+  <rect x="440" y="310" width="320" height="40" fill="#f4eede" />
+  <text class="b" x="600" y="336" text-anchor="middle" font-size="15">where the value lives</text>
+
+  <rect x="860" y="290" width="240" height="40" fill="#f4eede" />
+  <text class="it" x="980" y="316" text-anchor="middle" font-size="14">harm, breach, surprise</text>
+
+  <!-- Where users start, before the design intervenes -->
+  <text class="cap" x="60" y="440" font-size="12">where users start, before the design intervenes</text>
+
+  <!-- Novice marker (over-trusts) -->
+  <circle cx="980" cy="475" r="9" fill="#1a1a1a" />
+  <line x1="980" y1="464" x2="980" y2="395" stroke="#1a1a1a" stroke-width="1.5" stroke-dasharray="3 3" />
+  <text class="b" x="980" y="505" text-anchor="middle" font-size="14">novice user</text>
+  <text class="it" x="980" y="525" text-anchor="middle" font-size="13">over-trusts by default</text>
+
+  <!-- Expert marker (under-trusts) -->
+  <circle cx="220" cy="475" r="9" fill="#1a1a1a" />
+  <line x1="220" y1="464" x2="220" y2="395" stroke="#1a1a1a" stroke-width="1.5" stroke-dasharray="3 3" />
+  <text class="b" x="220" y="505" text-anchor="middle" font-size="14">expert user</text>
+  <text class="it" x="220" y="525" text-anchor="middle" font-size="13">under-trusts new systems</text>
+
+  <!-- Goal marker (the middle) -->
+  <circle cx="600" cy="475" r="9" fill="#d44569" />
+  <line x1="600" y1="464" x2="600" y2="395" stroke="#d44569" stroke-width="2" />
+  <text class="b" x="600" y="505" text-anchor="middle" font-size="14">where the design has to bring them</text>
+  <text class="it" x="600" y="525" text-anchor="middle" font-size="13">calibrated, per-user, per-task</text>
+</svg>

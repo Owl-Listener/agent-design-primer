@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 720" role="img" aria-labelledby="title desc">
+  <title id="title">The Layer 2 primitives map</title>
+  <desc id="desc">The eight Layer 2 primitives organised into three coloured zones: Output surface (sage) holds streaming, citations, confidence; Authority surface (teal) holds refusals, undo, handoffs; Conversation surface (yellow) holds clarifying questions and memory. Each primitive carries a geometric mark in the Owl-Listener visual vocabulary.</desc>
+  <style>
+    .bg { fill: #f4eede; }
+    .h1 { font-family: "Inter", "IBM Plex Sans", ui-sans-serif, system-ui, sans-serif; font-weight: 700; fill: #1a1a1a; letter-spacing: 1.5px; text-transform: uppercase; }
+    .h1-sub { font-family: "Inter", "IBM Plex Sans", ui-sans-serif, system-ui, sans-serif; font-weight: 500; fill: #1a1a1a; font-style: italic; opacity: 0.8; }
+    .label { font-family: "Inter", "IBM Plex Sans", ui-sans-serif, system-ui, sans-serif; font-weight: 600; fill: #1a1a1a; }
+    .tile { fill: #f4eede; stroke: #1a1a1a; stroke-width: 2; }
+    .zone-sage { fill: #a0b196; }
+    .zone-teal { fill: #2e9ba8; }
+    .zone-yellow { fill: #e6b637; }
+    .ink { fill: #1a1a1a; }
+    .mark-stroke { stroke: #1a1a1a; stroke-width: 2.5; fill: none; }
+  </style>
+
+  <rect class="bg" width="1200" height="720" />
+
+  <!-- ZONE 1: Output surface (sage, top-left) -->
+  <rect class="zone-sage" x="40" y="80" width="540" height="280" />
+  <text class="h1" x="60" y="60" font-size="18">Output surface</text>
+  <text class="h1-sub" x="60" y="78" font-size="14">how the agent communicates results</text>
+
+  <!-- Streaming tile -->
+  <rect class="tile" x="65" y="110" width="160" height="100" />
+  <g transform="translate(85, 130)">
+    <line x1="0" y1="0" x2="0" y2="30" class="mark-stroke" />
+    <line x1="12" y1="0" x2="12" y2="30" class="mark-stroke" />
+    <line x1="24" y1="0" x2="24" y2="30" class="mark-stroke" />
+    <line x1="36" y1="0" x2="36" y2="30" class="mark-stroke" />
+    <line x1="48" y1="0" x2="48" y2="30" class="mark-stroke" />
+  </g>
+  <text class="label" x="145" y="195" text-anchor="middle" font-size="17">Streaming</text>
+
+  <!-- Citations tile -->
+  <rect class="tile" x="245" y="110" width="160" height="100" />
+  <g transform="translate(265, 130)">
+    <circle cx="6" cy="6" r="6" class="ink" />
+    <circle cx="26" cy="6" r="6" class="ink" />
+    <circle cx="46" cy="6" r="6" class="ink" />
+    <circle cx="6" cy="26" r="6" class="ink" />
+    <circle cx="26" cy="26" r="6" class="ink" />
+    <circle cx="46" cy="26" r="6" class="ink" />
+  </g>
+  <text class="label" x="325" y="195" text-anchor="middle" font-size="17">Citations</text>
+
+  <!-- Confidence tile -->
+  <rect class="tile" x="425" y="110" width="135" height="100" />
+  <g transform="translate(440, 132)">
+    <rect x="0" y="0" width="106" height="8" class="ink" opacity="0.3" />
+    <rect x="0" y="14" width="106" height="8" class="ink" opacity="0.6" />
+    <rect x="0" y="28" width="106" height="8" class="ink" opacity="1" />
+  </g>
+  <text class="label" x="492" y="195" text-anchor="middle" font-size="17">Confidence</text>
+
+  <text class="h1-sub" x="60" y="340" font-size="13">three faces of truth</text>
+
+  <!-- ZONE 2: Authority surface (teal, top-right) -->
+  <rect class="zone-teal" x="620" y="80" width="540" height="280" />
+  <text class="h1" x="640" y="60" font-size="18" fill="#1a1a1a">Authority surface</text>
+  <text class="h1-sub" x="640" y="78" font-size="14">where authority lives between user and agent</text>
+
+  <!-- Refusals tile -->
+  <rect class="tile" x="645" y="110" width="160" height="100" />
+  <rect x="675" y="130" width="60" height="30" class="ink" />
+  <line x1="668" y1="123" x2="742" y2="167" stroke="#d44569" stroke-width="5" />
+  <text class="label" x="725" y="195" text-anchor="middle" font-size="17">Refusals</text>
+
+  <!-- Undo tile -->
+  <rect class="tile" x="825" y="110" width="160" height="100" />
+  <path d="M 870 165 Q 870 130, 905 130 L 940 130" class="mark-stroke" />
+  <path d="M 940 130 L 928 122 M 940 130 L 928 138" class="mark-stroke" />
+  <text class="label" x="905" y="195" text-anchor="middle" font-size="17">Undo</text>
+
+  <!-- Handoffs tile -->
+  <rect class="tile" x="1005" y="110" width="135" height="100" />
+  <circle cx="1030" cy="150" r="12" class="ink" />
+  <line x1="1045" y1="150" x2="1100" y2="150" class="mark-stroke" />
+  <path d="M 1100 150 L 1088 142 M 1100 150 L 1088 158" class="mark-stroke" />
+  <circle cx="1115" cy="150" r="12" class="ink" opacity="0.3" />
+  <text class="label" x="1072" y="195" text-anchor="middle" font-size="17">Handoffs</text>
+
+  <text class="h1-sub" x="640" y="340" font-size="13">where the user has authority</text>
+
+  <!-- ZONE 3: Conversation surface (yellow, bottom centre) -->
+  <rect class="zone-yellow" x="290" y="430" width="620" height="260" />
+  <text class="h1" x="310" y="412" font-size="18">Conversation surface</text>
+  <text class="h1-sub" x="310" y="425" font-size="14">how the relationship accumulates</text>
+
+  <!-- Clarifying tile -->
+  <rect class="tile" x="335" y="465" width="220" height="140" />
+  <g transform="translate(415, 495)">
+    <circle cx="30" cy="20" r="22" stroke="#1a1a1a" stroke-width="3" fill="none" />
+    <path d="M 22 14 Q 22 6, 30 6 Q 38 6, 38 14 Q 38 20, 30 22 L 30 28" stroke="#1a1a1a" stroke-width="3" fill="none" />
+    <circle cx="30" cy="34" r="2" class="ink" />
+  </g>
+  <text class="label" x="445" y="585" text-anchor="middle" font-size="17">Clarifying</text>
+
+  <!-- Memory tile -->
+  <rect class="tile" x="640" y="465" width="220" height="140" />
+  <g transform="translate(720, 495)">
+    <circle cx="30" cy="30" r="32" stroke="#1a1a1a" stroke-width="2.5" fill="none" />
+    <circle cx="30" cy="30" r="22" stroke="#1a1a1a" stroke-width="2.5" fill="none" />
+    <circle cx="30" cy="30" r="12" stroke="#1a1a1a" stroke-width="2.5" fill="none" />
+    <circle cx="30" cy="30" r="4" class="ink" />
+  </g>
+  <text class="label" x="750" y="585" text-anchor="middle" font-size="17">Memory</text>
+
+  <text class="h1-sub" x="310" y="667" font-size="13">what carries through time</text>
+</svg>

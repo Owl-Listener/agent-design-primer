@@ -1,0 +1,462 @@
+# agent-design-primer ↔ ai-design-skills cross-link map
+# Single source of truth for the loop between the two repos.
+#
+# Lives at: agent-design-primer/cross-links.yaml
+# Skill names below validated against ai-design-skills as of 2026-05-11.
+# If a skill name moves in the source repo, update it here first; chapter
+# footers should be regenerated from this file.
+#
+# Pattern:
+#   Each chapter has zero-or-one primary_skill (the skill someone naturally
+#   runs while reading) and zero-to-two secondary_skills (adjacent skills
+#   worth knowing about). related_chapters keeps internal navigation tight.
+#   inclusive_links point into inclusive-design-skills.
+
+version: 1
+last_updated: 2026-05-11
+maintainer: owl-listener
+ai_design_skills_repo: https://github.com/Owl-Listener/ai-design-skills
+
+# Six plugins in ai-design-skills, mapped to the six layers of AXD
+plugins:
+  - id: model-interaction-design
+    description: How humans and agents take turns
+  - id: ai-alignment-reasoning
+    description: Outside-of-the-model alignment work
+  - id: system-behavior-shaping
+    description: How the agent shows up — persona, tone, error personality
+  - id: evaluation
+    description: Failure taxonomies, output rubrics, agent-specific heuristics
+  - id: design-agent-orchestration
+    description: Multi-agent role design, handoffs, observability
+  - id: prompt-architecture
+    description: Chain-of-thought, constraint specification, system prompts
+
+chapters:
+
+  # ────────────────────────────────────────────────────────────
+  # Layer 1 — Foundations
+  # ────────────────────────────────────────────────────────────
+
+  - id: L1-foundations
+    title: Foundations — what an agent is and the agency spectrum
+    path: README.md   # inlined in the README
+    primary_skill: null   # pure reading; no runnable companion
+    secondary_skills: []
+    related_chapters: []
+    inclusive_links: []
+
+  # ────────────────────────────────────────────────────────────
+  # Layer 2 — Core interaction primitives
+  # ────────────────────────────────────────────────────────────
+
+  - id: L2-streaming
+    title: Streaming and partial output
+    path: chapters/L2-streaming.md
+    primary_skill:
+      plugin: model-interaction-design
+      skill: progressive-disclosure
+      summary: Patterns for revealing agent output incrementally with structure and pacing
+    secondary_skills:
+      - plugin: model-interaction-design
+        skill: generative-ui
+        summary: Companion for streams that produce interactive surfaces
+    related_chapters:
+      - L3-progress
+    inclusive_links:
+      - accessible-streaming-output
+
+  - id: L2-citations
+    title: Citations and provenance
+    path: chapters/L2-citations.md
+    primary_skill:
+      plugin: ai-alignment-reasoning
+      skill: transparency-patterns
+      summary: Surfacing the agent's sources, reasoning, and provenance to the user
+    secondary_skills:
+      - plugin: evaluation
+        skill: output-quality-rubrics
+        summary: Rubrics for evaluating whether claims are well-sourced
+    related_chapters:
+      - L2-confidence
+      - L4-hallucination
+    inclusive_links:
+      - accessible-citation-patterns
+
+  - id: L2-confidence
+    title: Confidence and uncertainty
+    path: chapters/L2-confidence.md
+    primary_skill:
+      plugin: ai-alignment-reasoning
+      skill: transparency-patterns
+      summary: Surfacing model confidence and uncertainty as calibrated signals
+    secondary_skills:
+      - plugin: evaluation
+        skill: output-quality-rubrics
+        summary: Calibrating confidence labels to base rates from eval data
+    related_chapters:
+      - L2-citations
+      - L4-trust-calibration
+    inclusive_links: []
+
+  - id: L2-refusal
+    title: Refusal patterns
+    path: chapters/L2-refusal.md
+    primary_skill:
+      plugin: ai-alignment-reasoning
+      skill: guardrail-design
+      summary: Designing the rules and copy for what the agent will and will not do
+    secondary_skills:
+      - plugin: ai-alignment-reasoning
+        skill: escalation-design
+        summary: Designing the path forward when the agent declines
+    related_chapters:
+      - L4-high-stakes-gates
+    inclusive_links: []
+
+  - id: L2-clarifying
+    title: Clarifying questions vs assuming
+    path: chapters/L2-clarifying.md
+    primary_skill:
+      plugin: model-interaction-design
+      skill: mixed-initiative-flow
+      summary: Deciding when the agent asks vs assumes vs surfaces its assumptions
+    secondary_skills:
+      - plugin: prompt-architecture
+        skill: system-prompt-structure
+        summary: Encoding clarification behaviour in the system prompt
+    related_chapters: []
+    inclusive_links: []
+
+  - id: L2-memory
+    title: Memory — session, persistent, scoped
+    path: chapters/L2-memory.md
+    primary_skill:
+      plugin: design-agent-orchestration
+      skill: state-management
+      summary: Designing tiered memory with user-visible scope and controls
+    secondary_skills:
+      - plugin: ai-alignment-reasoning
+        skill: consent-and-agency
+        summary: Memory as a consent and control surface for the user
+    related_chapters:
+      - L4-pii-handling
+    inclusive_links: []
+
+  - id: L2-undo
+    title: Undo and reversibility
+    path: chapters/L2-undo.md
+    primary_skill:
+      plugin: ai-alignment-reasoning
+      skill: consent-and-agency
+      summary: Reversibility as an expression of user agency over agent actions
+    secondary_skills:
+      - plugin: design-agent-orchestration
+        skill: failure-recovery
+        summary: Undo as one branch of the broader recovery design
+    related_chapters:
+      - L4-high-stakes-gates
+    inclusive_links: []
+
+  - id: L2-handoff
+    title: Handoffs — agent→user, agent→agent
+    path: chapters/L2-handoff.md
+    primary_skill:
+      plugin: design-agent-orchestration
+      skill: handoff-protocols
+      summary: Designing the payload, trigger, and re-entry points for handoffs
+    secondary_skills:
+      - plugin: design-agent-orchestration
+        skill: state-management
+        summary: Keeping context intact across handoffs
+    related_chapters:
+      - L3-multi-agent
+      - L3-plan-visibility
+    inclusive_links: []
+
+  # ────────────────────────────────────────────────────────────
+  # Layer 3 — Behaviour patterns
+  # ────────────────────────────────────────────────────────────
+
+  - id: L3-plan-visibility
+    title: Plan visibility before action
+    path: chapters/L3-plan-visibility.md
+    primary_skill:
+      plugin: design-agent-orchestration
+      skill: observability-design
+      summary: Making the agent's plan and intent legible before action
+    secondary_skills:
+      - plugin: design-agent-orchestration
+        skill: task-decomposition
+        summary: Breaking work into steps the plan can show
+    related_chapters:
+      - L3-progress
+      - L2-handoff
+    inclusive_links: []
+
+  - id: L3-progress
+    title: Step-tracking and progress
+    path: chapters/L3-progress.md
+    primary_skill:
+      plugin: design-agent-orchestration
+      skill: observability-design
+      summary: Surfacing in-flight state of agent work to the user
+    secondary_skills:
+      - plugin: design-agent-orchestration
+        skill: task-decomposition
+        summary: Progress hangs on the structure of the decomposed task
+    related_chapters:
+      - L3-long-running
+    inclusive_links: []
+
+  - id: L3-error-recovery
+    title: Error recovery and graceful degradation
+    path: chapters/L3-error-recovery.md
+    primary_skill:
+      plugin: design-agent-orchestration
+      skill: failure-recovery
+      summary: Designing retry, fallback, and human-handoff for agent failure modes
+    secondary_skills:
+      - plugin: system-behavior-shaping
+        skill: error-personality
+        summary: How the agent communicates failure with its voice and tone
+    related_chapters: []
+    inclusive_links: []
+
+  - id: L3-long-running
+    title: Long-running tasks and latency masking
+    path: chapters/L3-long-running.md
+    primary_skill:
+      plugin: design-agent-orchestration
+      skill: state-management
+      summary: Persisting agent state so the user can leave and return
+    secondary_skills:
+      - plugin: design-agent-orchestration
+        skill: observability-design
+        summary: Status pages and notifications for tasks that span time
+    related_chapters:
+      - L3-progress
+    inclusive_links: []
+
+  - id: L3-tool-use
+    title: Tool-use transparency
+    path: chapters/L3-tool-use.md
+    primary_skill:
+      plugin: ai-alignment-reasoning
+      skill: transparency-patterns
+      summary: Surfacing tool calls, inputs, outputs, and authority to the user
+    secondary_skills:
+      - plugin: prompt-architecture
+        skill: constraint-specification
+        summary: Specifying when and how the agent uses each tool
+    related_chapters: []
+    inclusive_links: []
+
+  - id: L3-multi-agent
+    title: Multi-agent orchestration UX
+    path: chapters/L3-multi-agent.md
+    primary_skill:
+      plugin: design-agent-orchestration
+      skill: agent-role-design
+      summary: Designing the roles, boundaries, and visibility of sub-agents
+    secondary_skills:
+      - plugin: design-agent-orchestration
+        skill: task-decomposition
+        summary: Routing work to the right sub-agent
+    related_chapters:
+      - L2-handoff
+      - L3-plan-visibility
+    inclusive_links: []
+
+  # ────────────────────────────────────────────────────────────
+  # Layer 4 — Trust, safety, accessibility
+  # ────────────────────────────────────────────────────────────
+
+  - id: L4-trust-calibration
+    title: Trust calibration across users
+    path: chapters/L4-trust-calibration.md
+    primary_skill:
+      plugin: evaluation
+      skill: user-satisfaction-signals
+      summary: Measuring whether users trust the agent appropriately for their tasks
+    secondary_skills:
+      - plugin: ai-alignment-reasoning
+        skill: transparency-patterns
+        summary: Transparency is the lever that calibrates trust
+    related_chapters:
+      - L2-confidence
+      - L4-hallucination
+    inclusive_links:
+      - inclusive-trust-signals
+
+  - id: L4-hallucination
+    title: Hallucination disclosure
+    path: chapters/L4-hallucination.md
+    primary_skill:
+      plugin: ai-alignment-reasoning
+      skill: transparency-patterns
+      summary: Disclosing fabricated or unsupported claims to the user
+    secondary_skills:
+      - plugin: evaluation
+        skill: failure-taxonomy
+        summary: Classifying hallucination types to design disclosure for each
+    related_chapters:
+      - L2-citations
+      - L2-confidence
+    inclusive_links: []
+
+  - id: L4-high-stakes-gates
+    title: High-stakes decision gates
+    path: chapters/L4-high-stakes-gates.md
+    primary_skill:
+      plugin: ai-alignment-reasoning
+      skill: escalation-design
+      summary: Designing confirmation, dual-control, and review for irreversible actions
+    secondary_skills:
+      - plugin: ai-alignment-reasoning
+        skill: guardrail-design
+        summary: Gates and guardrails are two sides of the same decision
+    related_chapters:
+      - L2-undo
+    inclusive_links: []
+
+  - id: L4-audit-trails
+    title: Audit trails and reversibility tiers
+    path: chapters/L4-audit-trails.md
+    primary_skill:
+      plugin: design-agent-orchestration
+      skill: observability-design
+      summary: Designing the persistent, user-facing record of agent actions
+    secondary_skills:
+      - plugin: evaluation
+        skill: longitudinal-measurement
+        summary: Audit trails are the data layer for long-term quality measurement
+    related_chapters:
+      - L2-undo
+      - L4-high-stakes-gates
+    inclusive_links: []
+
+  - id: L4-pii-handling
+    title: PII handling visibility
+    path: chapters/L4-pii-handling.md
+    primary_skill:
+      plugin: ai-alignment-reasoning
+      skill: consent-and-agency
+      summary: Surfacing what personal data the agent reads, stores, and shares
+    secondary_skills:
+      - plugin: ai-alignment-reasoning
+        skill: transparency-patterns
+        summary: PII visibility is a specific surface of broader transparency
+    related_chapters:
+      - L2-memory
+    inclusive_links: []
+
+  - id: L4-accessibility
+    title: Accessibility of agent loops
+    path: chapters/L4-accessibility.md
+    # Bridge chapter — primary value lives in inclusive-design-skills
+    primary_skill: null
+    secondary_skills: []
+    related_chapters:
+      - L2-streaming
+      - L2-citations
+      - L2-handoff
+    inclusive_links:
+      - cognitive-load-in-agent-loops
+      - accessible-streaming-output
+      - accessible-citation-patterns
+      - screen-reader-handoff-cues
+
+  # ────────────────────────────────────────────────────────────
+  # Layer 5 — Case studies
+  # ────────────────────────────────────────────────────────────
+
+  - id: L5-case-cursor
+    title: Case study — Cursor
+    path: case-studies/cursor.md
+    primary_skill:
+      plugin: evaluation
+      skill: output-quality-rubrics
+      summary: Deconstructs an existing AI product against the primer's patterns
+    secondary_skills: []
+    related_chapters:
+      - L2-streaming
+      - L3-tool-use
+      - L3-plan-visibility
+    inclusive_links: []
+
+  - id: L5-case-claude
+    title: Case study — Claude (artifacts and Computer Use)
+    path: case-studies/claude.md
+    primary_skill:
+      plugin: evaluation
+      skill: output-quality-rubrics
+      summary: Deconstructs an existing AI product against the primer's patterns
+    secondary_skills: []
+    related_chapters:
+      - L3-plan-visibility
+      - L4-high-stakes-gates
+      - L2-memory
+    inclusive_links: []
+
+  - id: L5-case-perplexity
+    title: Case study — Perplexity
+    path: case-studies/perplexity.md
+    primary_skill:
+      plugin: evaluation
+      skill: output-quality-rubrics
+      summary: Deconstructs an existing AI product against the primer's patterns
+    secondary_skills: []
+    related_chapters:
+      - L2-citations
+      - L4-hallucination
+    inclusive_links: []
+
+# ────────────────────────────────────────────────────────────
+# Appendices
+# ────────────────────────────────────────────────────────────
+
+appendices:
+  - id: A1-heuristics
+    title: Heuristics for agent UX
+    path: appendices/heuristics.md
+    primary_skill:
+      plugin: evaluation
+      skill: output-quality-rubrics
+      summary: A heuristic evaluation rubric tuned for agentic products
+    secondary_skills: []
+
+  - id: A2-anti-patterns
+    title: Anti-patterns
+    path: appendices/anti-patterns.md
+    primary_skill:
+      plugin: evaluation
+      skill: failure-taxonomy
+      summary: A catalogue of agent UX anti-patterns and their failure mechanisms
+    secondary_skills:
+      - plugin: ai-alignment-reasoning
+        skill: guardrail-design
+        summary: Many anti-patterns hide in refusal and gate UX
+
+# ────────────────────────────────────────────────────────────
+# Notes on this validation pass
+# ────────────────────────────────────────────────────────────
+#
+# 1. Skill names were validated against the public README and REFERENCES.md
+#    of ai-design-skills on 2026-05-11. The references file names ~30 of
+#    the 42 skills explicitly; the remaining ~12 skills were not named in
+#    public documentation and may exist with different names. When you have
+#    the full skill list, do a second pass on this file.
+#
+# 2. Where a chapter could pair with two or more plausible primary skills,
+#    we picked the one most directly named in REFERENCES.md and put the
+#    alternative as a secondary. Reasonable people will disagree; treat the
+#    primary assignments as the maintainer's call rather than a fact.
+#
+# 3. The bridge chapter (L4-accessibility) intentionally has no primary
+#    skill in ai-design-skills. Its companions live in inclusive-design-skills.
+#
+# 4. Case studies and the heuristics appendix all primary-link to
+#    evaluation / output-quality-rubrics because they are, in effect, rubric
+#    applications. Future case studies may justify pairing with more
+#    specific evaluation skills if those exist.

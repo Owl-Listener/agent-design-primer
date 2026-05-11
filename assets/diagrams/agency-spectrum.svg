@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600" role="img" aria-labelledby="title desc">
+  <title id="title">The agency spectrum</title>
+  <desc id="desc">A horizontal strip of four panels showing the four positions on the agency spectrum: Suggest, Review, Act, Autonomous. Each panel uses a different colour and stripe density. The visual intensity rises from left to right, communicating that the cost of trust rises across the spectrum.</desc>
+  <style>
+    .bg { fill: #f4eede; }
+    .h { font-family: "Inter", "IBM Plex Sans", ui-sans-serif, system-ui, sans-serif; font-weight: 700; fill: #1a1a1a; }
+    .b { font-family: "Inter", "IBM Plex Sans", ui-sans-serif, system-ui, sans-serif; font-weight: 500; fill: #1a1a1a; }
+    .c { font-family: "Inter", "IBM Plex Sans", ui-sans-serif, system-ui, sans-serif; font-weight: 500; fill: #f4eede; }
+    .it { font-style: italic; fill: #5a5a5a; }
+    .cap { font-family: "Inter", "IBM Plex Sans", ui-sans-serif, system-ui, sans-serif; font-weight: 600; fill: #1a1a1a; letter-spacing: 2px; text-transform: uppercase; font-size: 14px; }
+  </style>
+
+  <rect class="bg" width="1200" height="600" />
+
+  <!-- Trust cost label above -->
+  <text class="cap" x="60" y="55">cost of trust</text>
+  <!-- Arrow gradient bar -->
+  <defs>
+    <linearGradient id="trustG" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#a0b196" />
+      <stop offset="33%" stop-color="#2e9ba8" />
+      <stop offset="66%" stop-color="#e6b637" />
+      <stop offset="100%" stop-color="#d44569" />
+    </linearGradient>
+    <!-- Stripe patterns at varying density and colour -->
+    <pattern id="stripes1" patternUnits="userSpaceOnUse" width="22" height="22" patternTransform="rotate(0)">
+      <rect width="22" height="22" fill="#f4eede" />
+      <rect width="3" height="22" fill="#a0b196" />
+    </pattern>
+    <pattern id="stripes2" patternUnits="userSpaceOnUse" width="14" height="14">
+      <rect width="14" height="14" fill="#f4eede" />
+      <rect width="5" height="14" fill="#2e9ba8" />
+    </pattern>
+    <pattern id="stripes3" patternUnits="userSpaceOnUse" width="10" height="10">
+      <rect width="10" height="10" fill="#f4eede" />
+      <rect width="5" height="10" fill="#e6b637" />
+    </pattern>
+    <pattern id="stripes4" patternUnits="userSpaceOnUse" width="8" height="8">
+      <rect width="8" height="8" fill="#1a1a1a" />
+      <rect width="4" height="8" fill="#d44569" />
+    </pattern>
+  </defs>
+
+  <rect x="60" y="70" width="1080" height="14" rx="7" fill="url(#trustG)" />
+
+  <!-- Four panels -->
+  <g>
+    <rect x="60" y="130" width="255" height="320" fill="url(#stripes1)" stroke="#1a1a1a" stroke-width="2" />
+    <rect x="335" y="130" width="255" height="320" fill="url(#stripes2)" stroke="#1a1a1a" stroke-width="2" />
+    <rect x="610" y="130" width="255" height="320" fill="url(#stripes3)" stroke="#1a1a1a" stroke-width="2" />
+    <rect x="885" y="130" width="255" height="320" fill="url(#stripes4)" stroke="#1a1a1a" stroke-width="2" />
+  </g>
+
+  <!-- Title labels — sit in cream blocks for legibility -->
+  <g>
+    <rect x="75" y="148" width="225" height="50" fill="#f4eede" />
+    <text class="h" x="187" y="183" text-anchor="middle" font-size="26">Suggest</text>
+
+    <rect x="350" y="148" width="225" height="50" fill="#f4eede" />
+    <text class="h" x="462" y="183" text-anchor="middle" font-size="26">Review</text>
+
+    <rect x="625" y="148" width="225" height="50" fill="#f4eede" />
+    <text class="h" x="737" y="183" text-anchor="middle" font-size="26">Act</text>
+
+    <rect x="900" y="148" width="225" height="50" fill="#f4eede" />
+    <text class="h" x="1012" y="183" text-anchor="middle" font-size="26">Autonomous</text>
+  </g>
+
+  <!-- Examples (lower band in cream) -->
+  <g>
+    <rect x="75" y="370" width="225" height="65" fill="#f4eede" />
+    <text class="b" x="187" y="395" text-anchor="middle" font-size="16">Autocomplete</text>
+    <text class="it" x="187" y="418" text-anchor="middle" font-size="14">cheap</text>
+
+    <rect x="350" y="370" width="225" height="65" fill="#f4eede" />
+    <text class="b" x="462" y="395" text-anchor="middle" font-size="16">ChatGPT, Claude</text>
+    <text class="it" x="462" y="418" text-anchor="middle" font-size="14">moderate</text>
+
+    <rect x="625" y="370" width="225" height="65" fill="#f4eede" />
+    <text class="b" x="737" y="395" text-anchor="middle" font-size="16">Cursor agent mode</text>
+    <text class="it" x="737" y="418" text-anchor="middle" font-size="14">expensive</text>
+
+    <rect x="900" y="370" width="225" height="65" fill="#f4eede" />
+    <text class="b" x="1012" y="395" text-anchor="middle" font-size="16">Devin, overnight refactors</text>
+    <text class="it" x="1012" y="418" text-anchor="middle" font-size="14">paid in advance</text>
+  </g>
+
+  <!-- Bracket: spans the middle showing 'a product often spans a range' -->
+  <path d="M 350 510 Q 600 480, 850 510" fill="none" stroke="#1a1a1a" stroke-width="2" />
+  <line x1="350" y1="500" x2="350" y2="520" stroke="#1a1a1a" stroke-width="2" />
+  <line x1="850" y1="500" x2="850" y2="520" stroke="#1a1a1a" stroke-width="2" />
+  <text class="b" x="600" y="555" text-anchor="middle" font-size="16">a single product often spans a range</text>
+</svg>

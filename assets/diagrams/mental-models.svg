@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 660" role="img" aria-labelledby="title desc">
+  <title id="title">The five mental models users bring to agents</title>
+  <desc id="desc">Five panels, each in a different colour from the Owl-Listener palette, representing the five metaphors users bring to AI agents. Tool is shown as a solid rectangle in sage. Assistant is a friendly half-circle on a base in teal. Colleague is two interlocking forms in yellow. Oracle is a single dominant circle eye in magenta, marked as dangerous. Wizard is a starburst pattern in ink. Each carries a label of what users expect and how they fail.</desc>
+  <style>
+    .bg { fill: #f4eede; }
+    .name { font-family: "Inter", "IBM Plex Sans", ui-sans-serif, system-ui, sans-serif; font-weight: 700; fill: #1a1a1a; font-size: 26px; text-anchor: middle; letter-spacing: 0.5px; }
+    .name-cream { font-family: "Inter", "IBM Plex Sans", ui-sans-serif, system-ui, sans-serif; font-weight: 700; fill: #f4eede; font-size: 26px; text-anchor: middle; letter-spacing: 0.5px; }
+    .cap { font-family: "Inter", "IBM Plex Sans", ui-sans-serif, system-ui, sans-serif; font-weight: 600; fill: #1a1a1a; letter-spacing: 1.5px; text-transform: uppercase; font-size: 12px; text-anchor: middle; }
+    .b { font-family: "Inter", "IBM Plex Sans", ui-sans-serif, system-ui, sans-serif; font-weight: 500; fill: #1a1a1a; font-size: 13px; text-anchor: middle; }
+    .it { font-family: "Inter", "IBM Plex Sans", ui-sans-serif, system-ui, sans-serif; font-style: italic; fill: #5a5a5a; font-size: 13px; text-anchor: middle; }
+    .it-cream { font-family: "Inter", "IBM Plex Sans", ui-sans-serif, system-ui, sans-serif; font-style: italic; fill: #f4eede; opacity: 0.85; font-size: 13px; text-anchor: middle; }
+    .danger-flag { font-family: "Inter", "IBM Plex Sans", ui-sans-serif, system-ui, sans-serif; font-weight: 700; fill: #1a1a1a; letter-spacing: 2px; text-transform: uppercase; font-size: 11px; text-anchor: middle; }
+  </style>
+
+  <rect class="bg" width="1200" height="660" />
+
+  <!-- TOOL (sage) -->
+  <rect x="30" y="80" width="220" height="500" fill="#a0b196" stroke="#1a1a1a" stroke-width="2" />
+  <rect x="80" y="180" width="120" height="120" fill="#1a1a1a" />
+  <text class="name" x="140" y="370">Tool</text>
+  <text class="cap" x="140" y="410">expects</text>
+  <text class="b" x="140" y="435">determinism</text>
+  <text class="b" x="140" y="455">predictable</text>
+  <text class="cap" x="140" y="495">fails when</text>
+  <text class="it" x="140" y="520">the agent</text>
+  <text class="it" x="140" y="540">surprises them</text>
+
+  <!-- ASSISTANT (teal) — friendly half-circle on base -->
+  <rect x="265" y="80" width="220" height="500" fill="#2e9ba8" stroke="#1a1a1a" stroke-width="2" />
+  <path d="M 320 250 Q 320 180, 375 180 Q 430 180, 430 250 Z" fill="#f4eede" stroke="#1a1a1a" stroke-width="2" />
+  <rect x="320" y="248" width="110" height="50" fill="#f4eede" stroke="#1a1a1a" stroke-width="2" />
+  <text class="name" x="375" y="370">Assistant</text>
+  <text class="cap" x="375" y="410">expects</text>
+  <text class="b" x="375" y="435">eagerness</text>
+  <text class="b" x="375" y="455">correctable</text>
+  <text class="cap" x="375" y="495">fails when</text>
+  <text class="it" x="375" y="520">the agent repeats</text>
+  <text class="it" x="375" y="540">the same mistake</text>
+
+  <!-- COLLEAGUE (yellow) — two interlocking circles -->
+  <rect x="500" y="80" width="220" height="500" fill="#e6b637" stroke="#1a1a1a" stroke-width="2" />
+  <circle cx="580" cy="240" r="55" fill="#f4eede" stroke="#1a1a1a" stroke-width="2" />
+  <circle cx="640" cy="240" r="55" fill="none" stroke="#1a1a1a" stroke-width="2" />
+  <text class="name" x="610" y="370">Colleague</text>
+  <text class="cap" x="610" y="410">expects</text>
+  <text class="b" x="610" y="435">dialogue</text>
+  <text class="b" x="610" y="455">own taste</text>
+  <text class="cap" x="610" y="495">fails when</text>
+  <text class="it" x="610" y="520">the agent feels</text>
+  <text class="it" x="610" y="540">templated</text>
+
+  <!-- ORACLE (magenta, marked DANGEROUS) -->
+  <rect x="735" y="60" width="220" height="540" fill="#d44569" stroke="#1a1a1a" stroke-width="4" />
+  <text class="danger-flag" x="845" y="50">dangerous</text>
+  <circle cx="845" cy="220" r="65" fill="#f4eede" stroke="#1a1a1a" stroke-width="2.5" />
+  <circle cx="845" cy="220" r="22" fill="#1a1a1a" />
+  <text class="name-cream" x="845" y="370">Oracle</text>
+  <text class="cap" x="845" y="410" fill="#f4eede">expects</text>
+  <text class="b" x="845" y="435" fill="#f4eede">authority</text>
+  <text class="b" x="845" y="455" fill="#f4eede">trust by default</text>
+  <text class="cap" x="845" y="495" fill="#f4eede">fails when</text>
+  <text class="it-cream" x="845" y="520">user accepts</text>
+  <text class="it-cream" x="845" y="540">wrong output</text>
+
+  <!-- WIZARD (ink) — starburst pattern -->
+  <rect x="970" y="80" width="200" height="500" fill="#1a1a1a" stroke="#1a1a1a" stroke-width="2" />
+  <g transform="translate(1070, 230)">
+    <line x1="0" y1="-50" x2="0" y2="50" stroke="#f4eede" stroke-width="3" />
+    <line x1="-50" y1="0" x2="50" y2="0" stroke="#f4eede" stroke-width="3" />
+    <line x1="-35" y1="-35" x2="35" y2="35" stroke="#f4eede" stroke-width="3" />
+    <line x1="-35" y1="35" x2="35" y2="-35" stroke="#f4eede" stroke-width="3" />
+    <circle cx="0" cy="0" r="14" fill="#e6b637" />
+  </g>
+  <text class="name-cream" x="1070" y="370">Wizard</text>
+  <text class="cap" x="1070" y="410" fill="#f4eede">expects</text>
+  <text class="b" x="1070" y="435" fill="#f4eede">magic</text>
+  <text class="b" x="1070" y="455" fill="#f4eede">surprise</text>
+  <text class="cap" x="1070" y="495" fill="#f4eede">fails when</text>
+  <text class="it-cream" x="1070" y="520">failure is</text>
+  <text class="it-cream" x="1070" y="540">unexplained</text>
+
+  <!-- Caption underneath -->
+  <text class="b" x="600" y="630" text-anchor="middle" font-size="14">the metaphor users bring decides what they expect, what they forgive, and what makes them angry</text>
+</svg>
