@@ -2,7 +2,7 @@
 
 A primer for **designing AI agents** — written for a discipline that's still forming as I ship this.
 
-Five layers, contributable, opinionated, free. About 30,000 words of patterns, anti-patterns, and case studies, written for product designers now responsible for shipping agentic experiences and looking for more than another blog post.
+Five layers, contributable, opinionated, free. About 30,000 words of patterns, anti-patterns, and case studies, written for product designers now responsible for shipping agentic experiences and looking for more than another blog post. You can also feed it to your favourite AI work partner and they can run you through it, absorb it and guide you through. It is specifically structured to make this easy for them.
 
 This primer is about the *experience users have with agents*: the calibration of trust, the visibility of plans, the design of refusals, the texture of citations. It is not about *agentic design patterns* in the engineering sense (ReAct, reflection, planning loops, tool use, multi-agent orchestration). Those patterns are well documented elsewhere — see Microsoft's [`ai-agents-for-beginners`](https://github.com/microsoft/ai-agents-for-beginners) or Antonio Gulli's *Agentic Design Patterns*. This is the design twin: how the human and the agent meet on the surface.
 
