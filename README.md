@@ -1,6 +1,6 @@
 # agent-design-primer
 
-A primer for **designing AI agents** — written for a discipline that's still forming as I ship this.
+A primer for **designing AI agents** — written for a discipline that's still forming as this primer goes out the door.
 
 Five layers, contributable, opinionated, free. About 30,000 words of patterns, anti-patterns, and case studies, written for product designers now responsible for shipping agentic experiences and looking for more than another blog post. You can also feed it to your favourite AI work partner and they can run you through it, absorb it and guide you through. It is specifically structured to make this easy for them.
 
@@ -188,6 +188,6 @@ This primer is released under [Creative Commons Attribution 4.0](./LICENSE). Quo
 
 We are at a moment when the practice of design is being rewritten. The role of the product designer is shifting to the person who designs the *relationship* between a human and a new kind of intelligence.
 
-This primer will be wrong about some things and right about others, and it will keep evolvingnt. That is the point. The work is to keep moving, in public.
+This primer will be wrong about some things and right about others, and it will keep evolving. That is the point. The work is to keep moving, in public.
 
 If this helps you, send it to a designer who needs it.
