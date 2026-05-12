@@ -1,6 +1,6 @@
 # agent-design-primer
 
-A primer for **designing AI agents** — written for a discipline that's still forming as I ship it.
+A primer for **designing AI agents** — written for a discipline that's still forming as I ship this.
 
 Five layers, contributable, opinionated, free. About 30,000 words of patterns, anti-patterns, and case studies, written for product designers now responsible for shipping agentic experiences and looking for more than another blog post.
 
