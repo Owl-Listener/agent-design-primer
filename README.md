@@ -1,10 +1,12 @@
 # agent-design-primer
 
-The canonical reference for **designing AI agents** — the way `system-design-primer` is the canonical reference for designing distributed systems.
+A primer for **designing AI agents** — written in the spirit of `system-design-primer`, but for a discipline that's still forming as we ship it.
 
-Five layers, contributable, opinionated, free. About 30,000 words of patterns, anti-patterns, and case studies, written for product designers who are now responsible for shipping agentic experiences and need a real reference instead of another blog post.
+Five layers, contributable, opinionated, free. About 30,000 words of patterns, anti-patterns, and case studies, written for product designers now responsible for shipping agentic experiences and looking for more than another blog post.
 
-> **One thing first, because the words are overloaded.** This primer is about the *experience users have with agents*: the calibration of trust, the visibility of plans, the design of refusals, the texture of citations. It is not about *agentic design patterns* in the engineering sense (ReAct, reflection, planning loops, tool use, multi-agent orchestration). Those patterns are well documented elsewhere — see Microsoft's [`ai-agents-for-beginners`](https://github.com/microsoft/ai-agents-for-beginners) or Antonio Gulli's *Agentic Design Patterns*. This is the design twin: how the human and the agent meet on the surface.
+> **A note on the framing.** `system-design-primer` became canonical because distributed-systems concepts had stabilised by the time it was written. Agent UX has not. The patterns here are our best read on the field as of mid-2026. Some will date. Some will need to be rewritten. Some are probably already wrong. This is a snapshot of a discipline still forming, maintained in public. The commitment to keep maintaining it is what we hope makes it useful, not a claim to permanence.
+
+> **And one thing else, because the words are overloaded.** This primer is about the *experience users have with agents*: the calibration of trust, the visibility of plans, the design of refusals, the texture of citations. It is not about *agentic design patterns* in the engineering sense (ReAct, reflection, planning loops, tool use, multi-agent orchestration). Those patterns are well documented elsewhere — see Microsoft's [`ai-agents-for-beginners`](https://github.com/microsoft/ai-agents-for-beginners) or Antonio Gulli's *Agentic Design Patterns*. This is the design twin: how the human and the agent meet on the surface.
 
 ---
 
@@ -164,9 +166,11 @@ If you're new to the ecosystem, start with this primer's Layer 1 above and the `
 
 ## Status
 
-**v0.1** — full spine written and cross-linked. Diagrams are placeholders. Contributions welcome (see [CONTRIBUTING.md](./CONTRIBUTING.md)).
+**v0.1** — full spine written, twenty chapters across five layers, three case studies, two appendices. Diagrams are placeholders in v0.1 and will be redrawn in the Owl-Listener visual language for v0.2.
 
-A v0.2 release will add the diagram set, refresh the case studies, and validate every cross-link against the live `ai-design-skills` skill names.
+This primer is maintained in public. Patterns will be added as the field surfaces new ones. Case studies will be refreshed quarterly with a dated *last validated* footer. Cross-links will be re-checked as `ai-design-skills` evolves. The version of this primer that exists in 2027 will look different from the one you're reading now — that's deliberate, not a flaw.
+
+Contributions welcome (see [CONTRIBUTING.md](./CONTRIBUTING.md)).
 
 ---
 
