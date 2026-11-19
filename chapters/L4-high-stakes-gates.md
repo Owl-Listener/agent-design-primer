@@ -68,6 +68,14 @@ For changing a tax setting or modifying the chart of accounts — a 24-hour cool
 
 The same product, the same agent, five different gate strengths. Users encounter friction proportional to consequence, and the gates that matter are the ones they actually read.
 
+### Service desk triage
+
+At the fictional Harborline service desk, use the [Place authority exercise](https://humanaiwork.org/site/index.html#/module/coordinate-place-authority) to ask what the agent may do, what a person needs to see or decide, and what would change who acts. The agent can queue a ticket about a flickering meeting-room screen when the required details are present and the routine routing policy allows it. If a required detail is missing, the service desk lead reviews the ticket.
+
+A new analyst needs access to a dashboard with internal forecasts before tomorrow's review. The agent prepares a proposal for same-day human review that shows the requested dashboard, the deadline and the missing permission level. Access stays pending until an authorised reviewer confirms the permission level and approves the grant.
+
+*Adapted from 2 [fictional service requests](https://humanaiwork.org/site/index.html#/materials/case%3Aservice-request-triage%3Ainputs%3Arequest-batch) and their routing rules in Human-AI Work Toolkit by [Suhaib Aslam](https://www.suhaibaslam.com), licensed under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/).*
+
 ## What this opens up
 
 Gate design is the surface where the agent's respect for the user's authority becomes visible. A system that gates well is a system that has understood the asymmetry of an irreversible action and built the design to honour it. A system that gates poorly is a system that has either over-trusted itself or under-trusted the user, and both errors are corrosive.
